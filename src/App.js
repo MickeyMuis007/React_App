@@ -5,21 +5,11 @@ import Person from './Person/Person';
 class App extends Component {
   state = {
     persons: [
-      { name: 'Max', age:'28' },
-      { name: 'Manu', age:'29' },
-      { name: 'Stephanie', age:'26' }
+      { id: 'kjds-adjie-jfds-dsa1', name: 'Max', age:'28' },
+      { id: 'kjds-adjie-jfds-dsa2', name: 'Manu', age:'29' },
+      { id: 'kjds-adjie-jfds-dsa3', name: 'Stephanie', age:'26' }
     ],
     showPersons: false
-  }
-
-  switchNameHandler = (newName) => {
-    this.setState({
-      persons: [
-        { name: newName, age:'28' },
-        { name: 'Manu', age:'29' },
-        { name: 'Stephanie', age:'27' }
-      ]
-    })
   }
 
   togglePersonsHandler = () => {
@@ -64,7 +54,8 @@ class App extends Component {
             return <Person 
               click = {() => this.deletePersonHandler(index)}
               name={person.name} 
-              age={person.age} />
+              age={person.age} 
+              key={person.id} />
           })}
         </div>
         );
