@@ -48,7 +48,8 @@ class App extends Component {
     // The render function excecutes everytime there is a change that occurred on the page
 
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
@@ -70,6 +71,8 @@ class App extends Component {
           })}
         </div>
         );
+
+        style.backgroundColor = 'red';
     } 
 
     return (
